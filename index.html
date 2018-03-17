@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>answer</title>
+    <!--注入配置的占位符必须保留-->
+    <script id="inject_config">var __config = {"env":"development","app_id":"02b36350-0e09-4cf9-a9e6-5eb72fdcca24","base_url":"http://fepapi.dev.web.nd","uc_login":"http://uc-personal-web.beta.web.sdp.101.com/passport/login.html?app_id=02b36350-0e09-4cf9-a9e6-5eb72fdcca24","ref_path":"http://betacs.101.com/v0.1/static"};</script>
+</head>
+
+<!-- 作答 -->
+<!-- <body>
+    <div id="frame" >
+        <answer-header></answer-header>
+        <answer-question>
+            <side-bar>
+                <return-list></return-list>
+                <font-size></font-size>
+                <view-error></view-error>
+                <count-down></count-down>
+                <answer-sheet-btn></answer-sheet-btn>
+                <finished></finished>
+                <to-top></to-top>
+            </side-bar>
+        </answer-question>
+        <loading></loading>
+    </div>
+    <script>
+        var _player = new Hunter.Player({
+            element: '#frame',
+            baseConfig: {
+                refPath: 'http://betacs.101.com/v0.1/static',//ndr音视频占位符\$\{ref\-path}要替换成这个地址
+                baseURL: 'http://fepapi.dev.web.nd',
+                authorization: 'debug userid=2079944857',
+                examId: '40ff0628-a8d8-4493-a65f-c4fe44d0d147',// EN:'396c04ee-cb19-436b-9ae5-eb44941fb728' ,no:'0a4a185e-fdac-49ec-80b8-b90cee0f991c'
+                userId:'2079944857',  //批阅用到当前用户id
+                //isAllFinishedCanSubmit:true, // 交卷模式，为true时必须答题完才可交卷
+                type:'answer',  //调用类型：'answer'[默认]、'view'、'mark'
+                //qids:['d48efe00-b078-4518-b944-9016bbadb6df','4cff49f8-69c3-43f6-bfd4-ce6e488f2b1b'],
+                /**
+                 * [resourceLimit]
+                 * 如果指定此配置则用此限制，否则使用组件默认逻辑
+                 *      作答中且为英语学科时range=['audio','video'],type='once）
+                 *      作答中且为非英语学科时range=['audio'],type='times
+                 *      非作答中不限制
+                 * range：资源限制范围['audio','video']
+                 * type：'times':不限制播放，（30%上报一次，不可拖拽seek，暂停即停止）
+                 *       'once' :只能播放一次（其他音视频播放时不能播放新音视频，播放中不能暂停，不可拖拽seek，不可重复播放，添加只能播放一次提示语）
+                 */
+                // resourceLimit:{
+                //     range:['audio'],
+                //     type:'times',
+                // }
+            },
+            isStudent: true
+        });
+    </script>
+</body> -->
+
+<!-- 批阅 -->
+<body>
+    <div id="frame">
+        <mark-header>
+             <complete-mark slot="submitMark"></complete-mark>
+        </mark-header>
+        <mark-question></mark-question>
+        <switch-student></switch-student>
+        <mark-cover></mark-cover>
+        <loading></loading>
+        <guide></guide>
+    </div>
+    <script>
+        var _player = new Hunter.Player({
+            element: '#frame',
+            baseConfig: {
+                baseURL: 'http://fepapi.dev.web.nd',
+                roleType:'TEACHER',  // 用户角色，业务用于区分第三方批阅教师和平台教师
+                authorization: 'debug userid=2079952311',
+                examId: '6c2f4531-f1a9-461e-9022-64d6d7841113',
+                paperId:'3449fb58-3870-4063-9be6-0a0aaf5feb2d',
+                userId:'2079952311',  //批阅用到当前用户id
+                //studentId: '2079944857',  //查看的学生id
+                classId: '495331861972',
+                isAllFinishedCanSubmit:true, // 交卷模式，为true时必须答题完才可交卷
+                type:'mark',  //调用类型：'answer'[默认]、'view'、'mark'
+                //customMarkStandard:true,  //使用自定义分数评分
+            },
+            isStudent: false
+        });
+    </script>
+</body>
+
+</html>

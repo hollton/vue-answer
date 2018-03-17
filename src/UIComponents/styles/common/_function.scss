@@ -1,0 +1,45 @@
+// 按钮状态函数
+@mixin buttonState($color, $percent){
+    &:hover{
+        background-color: darken($color, $percent);
+    }
+    &:active{
+        background-color: lighten($color, $percent);
+    }
+}
+
+// 链接状态函数
+@mixin linkState($color, $percent){
+    &:hover{
+        color: darken($color, $percent);
+    }
+    &:active{
+        color: lighten($color, $percent);
+    }
+    &:link{
+        color: $color;
+    }
+    &:visited{
+        color: $color;
+    }
+}
+
+@mixin inputState($color, $percent){
+    &:focus{
+        border-color: $color;
+    }
+}
+
+.sidebar-scroll {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 9px;
+  }
+  &::-webkit-scrollbar-thumb {
+    min-height: 28px;
+    background-color: rgb(230, 231, 232);
+    padding: 20px 2px 0 0;
+    border: 2px solid #fff;
+    border-radius: 5px;
+  }
+}

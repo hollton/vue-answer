@@ -1,0 +1,43 @@
+.fa-input{
+    display: inline-block;
+    width: 448px;
+    height: 36px;
+    position: relative;
+    box-sizing: border-box;
+    .fa-input__input{
+        width: 100%;
+        height: 100%;
+        padding: 0 5px;
+        border: 1px solid $borderColor;
+        outline: none;
+        border-radius: 3px;
+        @include inputState($mainColor,0);
+        box-sizing: border-box;
+        color: #333;
+        &.is-disabled{
+            background: #efefef;
+            cursor: not-allowed;
+            &:focus{
+                border-color: $borderColor !important;
+                box-shadow: 0px 0px 0px !important;
+            }
+        }
+    }
+    .fa-input__count{
+        display: none;
+        position: absolute;
+        right: 2px;
+        bottom: 2px;
+        color: $darkGrayColor;
+        .fa-input__count__number{
+            &.is-overstep{
+                color: $dangerColor;
+            }
+        }
+    }
+    &.is-count{
+        .fa-input__count{
+            display: inline-block;
+        }
+    }
+}

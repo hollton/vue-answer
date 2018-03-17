@@ -1,0 +1,51 @@
+.fa-dialog{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2007;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    &:after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 0;
+        vertical-align: middle;
+    }
+    .fa-dialog__wrap{
+        text-align: left;
+        display: inline-block;
+        vertical-align: middle;
+        min-width: 420px;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .fa-dialog__header{
+        position: relative;
+        margin: 0 0 5px 0;
+        .fa-dialog__title{
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .fa-dialog__close{
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            color: $darkGrayColor;
+            @include linkState($darkGrayColor, 10%);
+        }
+    }
+
+    .fa-dialog__body{
+        padding: 30px 0;
+        font-size: $fontSizeBase;
+    }
+    .fa-dialog__footer{
+        text-align: right;
+    }
+}

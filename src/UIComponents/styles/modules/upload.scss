@@ -1,0 +1,113 @@
+.fa-upload{
+
+    .fa-upload__container {
+        display: none;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        border-top: 0;
+        border-radius: 3px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        top: -2px;
+        box-sizing: border-box;
+        &.on {
+            display: block;
+        }
+        .img-counter {
+            color: #666;
+            margin-bottom: 15px;
+            em {
+                color: #999;
+            }
+            &:before {
+                content: '';
+                float: left;
+                width: 16px;
+                height: 21px;
+                background: url(../images/spritenv.png) no-repeat -38px -1524px;
+                margin-right: 5px;
+            }
+            .btn-close {
+                float: right;
+                width: 20px;
+                height: 20px;
+                background: url(../images/spritenv.png) no-repeat -80px -1280px;
+            }
+        }
+    }
+    .img-list {
+        display: inline-block;
+        float: left;
+        li {
+            float: left;
+            width: 90px;
+            height: 68px;
+            background-color: #eee;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 0 10px 10px 0;
+            line-height: 68px;
+            text-align: center;
+            color: #cfcfcf;
+            position: relative;
+            img {
+                width: 90px;
+                height: 68px;
+                cursor:pointer;
+            }
+            .btn-deleteimg {
+                display: inline-block;
+                width: 27px;
+                height: 27px;
+                background: rgba(#000, 0.302);
+                position: absolute;
+                right: 0;
+                top: 0;
+                border-bottom-left-radius: 27px;
+                &:hover {
+                    background: rgba(#000, 0.7);
+                }
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    background: url(../images/spritenv.png) 0 -1316px;
+                    position: relative;
+                    top: -23px;
+                    left: 3px;
+                }
+            }
+            &.img-list-loading {
+                background: #4c4c4c;
+                top: 0;
+                right: 0;
+                z-index: 0;
+                overflow: hidden;
+                border: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            &.failed {
+                background-image: url(../images/0816-uploadfailed.png);
+            }
+        }
+    }
+    .addimg-nv-min {
+        display: inline-block;
+        width: 90px;
+        height: 68px;
+        margin: 0 10px 10px -2px;
+        cursor: pointer;
+        background: url(../images/0816-addimg-min.png) no-repeat center center;
+        background-size: 100% 100%;
+    }
+
+    .fa-upload__file{
+        display: inline-block;
+        .fa-upload__input{
+            display: none;
+        }
+    }
+}

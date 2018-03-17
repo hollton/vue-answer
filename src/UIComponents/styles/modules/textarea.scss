@@ -1,0 +1,37 @@
+.fa-textarea{
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    .fa-textarea__input{
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        border: 1px solid $borderColor;
+        border-radius: 4px;
+        box-sizing: border-box;
+        outline: none;
+        @include inputState($mainColor,0);
+        box-shadow: inset 0.5px 0.866px 1px 0px rgba(1, 1, 1, 0.05);
+        &.unresize{
+            resize: none;
+        }
+        &.is-disabled{
+            background: #efefef;
+            cursor: not-allowed;
+            &:focus{
+                border-color: $borderColor !important;
+                box-shadow: 0px 0px 0px !important;
+            }
+        }
+    }
+    .fa-textarea__count{
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        .fa-textarea__count__number{
+            &.is-wrong {
+                color: $dangerColor;
+            }
+        }
+    }
+}

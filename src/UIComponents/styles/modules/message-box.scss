@@ -1,0 +1,82 @@
+.fa-pop{
+    &:after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 0;
+        vertical-align: middle;
+    }
+    .popup-wrap {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        .popup-mask {
+            @extend .popup-wrap;
+            background: #000;
+            opacity: 0.4;
+            z-index: 1;
+        }
+        .popup-content {
+            width: 460px;
+            max-height: 90vh;
+            background: #fff;
+            border-radius: 6px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 2;
+            .popup-headtitle {
+                height: 54px;
+                line-height: 54px;
+                border-bottom: 1px solid #e6e7e8;
+                border-radius: 6px 6px 0 0;
+                padding: 0 30px;
+                background: #fafafa;
+                h2 {
+                    font-size: 20px;
+                    color: $textColor;
+                    font-weight: normal;
+                }
+                .popup-btn-close {
+                    width: 19px;
+                    height: 18px;
+                    background: url(../images/spritenv.png) no-repeat 0 -204px;
+                    margin-top: 18px;
+                }
+            }
+            .popup-body {
+                max-height: calc( 90vh - 166px );
+                min-height: 10vh;
+                padding: 20px 60px;
+                font-size: 16px;
+                @extend .sidebar-scroll;
+                .icon-warning{
+                    display: block;
+                    margin: 0 auto 10px;
+                    width: 52px;
+                    height: 52px;
+                    background: url(../images/spritenv.png) no-repeat 0 -1869px
+                }
+                .text{
+                    font-size: 16px;
+                    padding: 0 26px;
+                    text-align: center;
+                    line-height: 26px;
+                }
+            }
+            .popup-bottom {
+                width: 100%;
+                height: 70px;
+                border-top: 1px solid #e6e7e8;
+                text-align: center;
+                .btn-common {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}

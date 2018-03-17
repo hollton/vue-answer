@@ -1,0 +1,51 @@
+.fa-button{
+    display: inline-block;
+    width: 144px;
+    height: 40px;
+    margin: 0 14px;
+    border-radius: 3px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    @include buttonState(#fff, 10%);
+
+    &.fa-button--primary{
+        color: #fff;
+        background-color: $mainColor;
+        @include buttonState($mainColor, 10%);
+    }
+
+    &.fa-button--success{
+        color: #fff;
+        background-color: $successColor;
+        @include buttonState($successColor, 10%);
+    }
+
+    &.fa-button--warning{
+        color: #fff;
+        background-color: $warningColor;
+        @include buttonState($warningColor, 10%);
+    }
+
+    &.fa-button--danger{
+        color: #fff;
+        background-color: $dangerColor;
+        @include buttonState($dangerColor, 10%);
+    }
+
+    &.fa-button--large{
+        font-size: $fontSizeLarge;
+    }
+
+    &.fa-button--small{
+        width: 112px;
+        font-size: 16px; 
+    }
+
+    &.is-disabled{
+        cursor: not-allowed;
+        background-color: #eef1f6;
+        color: #bfcbd9;
+        @include buttonState(#eef1f6, 0);
+    }
+}

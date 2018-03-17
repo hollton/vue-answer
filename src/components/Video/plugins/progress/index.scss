@@ -1,0 +1,9 @@
+@mixin pointerEvents {
+	pointer-events: none;
+}
+
+.custom-disable-progress{
+	.vjs-progress-control {
+	    @include pointerEvents;
+	}
+}

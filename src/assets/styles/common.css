@@ -1,0 +1,30 @@
+::-webkit-scrollbar-thumb{
+    background-color: #ccc;
+}
+
+.image-loading{
+    width: 100%;
+    height: 100%;
+}
+
+.answer-header{
+    width: 1200px;
+    margin: 0 auto 0 auto;
+}
+
+.answering-header.answering-header .exampage-questype{
+    margin: 10px 0;
+}
+
+.exampage.exampage{
+    margin-bottom: 0;
+}
+.exampage .exampage-question{
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1681px){
+    .side-toolbar{
+        margin-right: -1px;
+    }
+}

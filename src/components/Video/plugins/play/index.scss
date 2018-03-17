@@ -1,0 +1,11 @@
+@mixin pointerEvents {
+	pointer-events: none;
+}
+.custom-disable-play, .disable-can-play{
+	.vjs-tech{
+		@include pointerEvents
+	}
+	.vjs-play-control{
+		@include pointerEvents;
+	}
+}

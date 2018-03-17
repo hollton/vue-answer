@@ -1,0 +1,19 @@
+// 公用部分导入
+@import "./common/reset"; // 重置
+@import "./common/var"; // 颜色
+@import "./common/function"; // 函数
+
+
+// 模块导入
+@import "./modules/button"; // 按钮
+@import "./modules/message-box"; // 弹窗
+@import "./modules/checkbox"; // 多选按钮
+@import "./modules/radio"; // 单选按钮
+@import "./modules/input"; // 输入框
+@import "./modules/textarea"; // 文本域
+@import "./modules/upload"; // 上传
+@import "./modules/cropper"; // 图片裁剪
+@import "./modules/dialog"; // 对话框
+@import "./modules/tip"; // tip提示
+@import "./modules/progress"; // 进度
+@import "./modules/loading"; // 加载

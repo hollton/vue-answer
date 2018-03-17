@@ -1,0 +1,22 @@
+.play-count-box {
+    height: 20px;
+    line-height: 18px;
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    color:#fff;
+    background: #1E232C;
+    padding-left: 15px;
+    font-size:12px;
+    &.once-tip{
+    	color: #ffab37;
+    	padding-left: 36px;
+    	i{
+    		position: absolute;
+    		left: 13px;
+    		width: 17px;
+    		height: 17px;
+    		background: url(../../../../assets/images/ct-sprite.png) no-repeat -70px -558px;
+    	}
+    }
+}

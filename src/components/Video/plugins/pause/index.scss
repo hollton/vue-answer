@@ -1,0 +1,13 @@
+@mixin pointerEvents {
+	pointer-events: none;
+}
+.custom-disable-pause{
+	&.vjs-playing{
+		.vjs-tech{
+			@include pointerEvents
+		}
+	}
+	.vjs-play-control.vjs-playing{
+		@include pointerEvents;
+	}
+}

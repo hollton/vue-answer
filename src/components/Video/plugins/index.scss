@@ -1,0 +1,22 @@
+.video-js{
+    clear:both;
+    // 音视频设置高度
+    min-height:450px;
+    &.vjs-audio{
+        height:42px;
+        min-height:auto;
+    }
+
+    // poster封面
+    .vjs-poster{
+        position: absolute;
+        z-index:2;
+        background-size: 223px 113px;
+        background-image:url("../../../assets/images/fep_loading.gif")!important;
+    }
+
+    // 初始显示控制
+    .vjs-control-bar{
+        display: flex!important;
+    }
+}
