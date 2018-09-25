@@ -1,8 +1,6 @@
 {
   "name": "answer",
   "version": "0.0.1",
-  "description": "a answer component for GaoJingJian",
-  "author": "唐焱鑫(380984) <380984@nd.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
