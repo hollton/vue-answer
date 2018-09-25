@@ -1,6 +1,6 @@
 # vue-answer
 
-> 基于 vue + vuex 构建考试作答、批阅组件
+> 基于 vue + vuex 构建
 
 ## Build Setup
 
@@ -28,26 +28,6 @@ npm test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-
-# 学习材料
-- [axios](https://github.com/mzabriskie/axios)
-- [vue](https://cn.vuejs.org/)
-- [vue-router](https://router.vuejs.org/)
-- [vuex](https://vuex.vuejs.org/zh-cn/)
-- [vue-i18n](https://kazupon.github.io/vue-i18n/en/)
-- [vue-loader](http://vue-loader.vuejs.org/)
-- [awesome-vue](https://github.com/vuejs/awesome-vue)
-- [ES6](https://babeljs.io/learn-es2015/)
-- [ES6](http://es6.ruanyifeng.com)
-- [webpack](http://www.css88.com/doc/webpack2/)
-- [Gitter Chat](https://gitter.im/vuejs/vue)
-- [Mock](https://github.com/nuysoft/Mock/wiki)
-- [ElementUI](http://element.eleme.io)
-
-
-# 经验总结
-- [tyx](http://note.youdao.com/noteshare?id=ae7219e80ff3814d6cbbb6a8153d59d4&sub=E364A1AF30B44A1E95D7F8E47F1DFEC1)
 
 # 更新日志
 ## 2017.11.02
